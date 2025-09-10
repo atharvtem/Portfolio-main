@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atharv Tembhurnikar - Data Science Graduate Student</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'inter': ['Inter', 'sans-serif'],
+            },
+            colors: {
+              'primary': '#10b981',
+              'secondary': '#1f2937',
+              'accent': '#3b82f6',
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="font-inter bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">  
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <span class="text-2xl font-bold text-primary">AT</span>
+          </div>
+          
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex space-x-8">
+            <a href="#about" class="nav-link text-gray-300 hover:text-primary transition-colors duration-300">About</a>
+            <a href="#education" class="nav-link text-gray-300 hover:text-primary transition-colors duration-300">Education</a>
+            <a href="#experience" class="nav-link text-gray-300 hover:text-primary transition-colors duration-300">Experience</a>
+            <a href="#projects" class="nav-link text-gray-300 hover:text-primary transition-colors duration-300">Projects</a>
+            <a href="#publications" class="nav-link text-gray-300 hover:text-primary transition-colors duration-300">Publications</a>
+            <a href="#blogs" class="nav-link text-gray-300 hover:text-primary transition-colors duration-300">Blogs</a>
+            <a href="#skills" class="nav-link text-gray-300 hover:text-primary transition-colors duration-300">Skills</a>
+            <a href="#contact" class="nav-link text-gray-300 hover:text-primary transition-colors duration-300">Contact</a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button id="mobile-menu-btn" class="text-gray-300 hover:text-primary">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden pb-4">
+          <div class="flex flex-col space-y-2">
+            <a href="#about" class="nav-link text-gray-300 hover:text-primary transition-colors duration-300 py-2">About</a>
+            <a href="#education" class="nav-link text-gray-300 hover:text-primary transition-colors duration-300 py-2">Education</a>
+            <a href="#experience" class="nav-link text-gray-300 hover:text-primary transition-colors duration-300 py-2">Experience</a>
+            <a href="#projects" class="nav-link text-gray-300 hover:text-primary transition-colors duration-300 py-2">Projects</a>
+            <a href="#publications" class="nav-link text-gray-300 hover:text-primary transition-colors duration-300 py-2">Publications</a>
+            <a href="#blogs" class="nav-link text-gray-300 hover:text-primary transition-colors duration-300 py-2">Blogs</a>
+            <a href="#skills" class="nav-link text-gray-300 hover:text-primary transition-colors duration-300 py-2">Skills</a>
+            <a href="#contact" class="nav-link text-gray-300 hover:text-primary transition-colors duration-300 py-2">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-16">
+      <!-- Hero Section -->
+      <section id="about" class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="mb-8" data-aos="fade-up">
+            <div class="relative mx-auto" style="width: 192px; height: 192px;">
+              <img 
+                src="logos/profilewebp.webp" 
+                alt="Atharv Tembhurnikar" 
+                class="w-full h-full rounded-full border-4 border-primary shadow-2xl hover:scale-105 transition-transform duration-300 object-cover"
+              />
+              <div class="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 animate-pulse pointer-events-none"></div>
+            </div>
+          </div>
+          
+          <div data-aos="fade-up" data-aos-delay="200">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Atharv Tembhurnikar
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto leading-relaxed">
+              Data Science Graduate Student at University of Maryland
+            </p>
+            <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+              📍 College Park, MD | 📧 attem@umd.edu | 📱 (240) 886-6670
+            </p>
+            <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+              Passionate about AI, Machine Learning, and Data-Driven Solutions with Published Research Experience
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
+            <a href="#contact" class="btn-primary px-8 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg">
+              Get In Touch
+            </a>
+            <a href="Atharv Tembhurnikar_Resume.pdf" target="_blank" class="btn-secondary px-8 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+              Download Resume
+            </a>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <!-- Education Section -->
+      <section id="education" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary">Education</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
+          </div>
+          
+          <div class="space-y-8">
+            <!-- Master's Degree -->
+            <div class="education-card bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-8 border border-gray-700/50" data-aos="fade-up" data-aos-delay="100">
+              <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                <div class="flex items-start space-x-4">
+                  <div class="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Master of Science in Data Science</h3>
+                    <p class="text-primary font-semibold text-lg mb-2">University of Maryland, College Park</p>
+                    <p class="text-gray-400">Expected Graduation: May 2027</p>
+                  </div>
+                </div>
+                <div class="mt-4 lg:mt-0 text-right">
+                  <span class="bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold">Current</span>
+                </div>
+              </div>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="text-lg font-semibold text-white mb-3">Relevant Coursework</h4>
+                  <ul class="space-y-2 text-gray-300">
+                    <li class="flex items-center">
+                      <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                      Probability and Statistics
+                    </li>
+                    <li class="flex items-center">
+                      <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                      Introduction to Data Science
+                    </li>
+                    <li class="flex items-center">
+                      <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                      Introduction to Machine Learning
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold text-white mb-3">Focus Areas</h4>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Machine Learning</span>
+                    <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Data Analytics</span>
+                    <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Statistical Modeling</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bachelor's Degree -->
+            <div class="education-card bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-8 border border-gray-700/50" data-aos="fade-up" data-aos-delay="200">
+              <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                <div class="flex items-start space-x-4">
+                  <div class="w-16 h-16 bg-gradient-to-r from-accent to-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Bachelor of Technology in AI & Data Science</h3>
+                    <p class="text-primary font-semibold text-lg mb-2">Savitribai Phule Pune University</p>
+                    <p class="text-gray-400">Graduated: May 2025</p>
+                  </div>
+                </div>
+                <div class="mt-4 lg:mt-0 text-right">
+                  <div class="text-2xl font-bold text-primary mb-1">3.83/4.0</div>
+                  <div class="text-gray-400 text-sm">CGPA</div>
+                </div>
+              </div>
+              <p class="text-gray-300 leading-relaxed">
+                Specialized in Artificial Intelligence and Data Science with strong foundation in machine learning, 
+                deep learning, and statistical analysis. Completed multiple research projects and published papers 
+                in IEEE conferences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary">Professional Experience</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
+          </div>
+
+          <div class="space-y-8">
+            <!-- Data Science Intern -->
+            <div class="experience-card bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-8 border border-gray-700/50" data-aos="fade-up" data-aos-delay="100">
+              <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+                <div class="flex items-start space-x-4">
+                  <div class="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Data Science Intern</h3>
+                    <p class="text-primary font-semibold text-lg mb-2">Hackveda Private Limited</p>
+                    <p class="text-gray-400">Pune, India</p>
+                  </div>
+                </div>
+                <div class="mt-4 lg:mt-0 text-right">
+                  <span class="bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold">Jan 2025 - Jun 2025</span>
+                </div>
+              </div>
+              <ul class="space-y-3 text-gray-300 mb-6">
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                  Processed and analyzed real-time e-commerce data including orders, pricing, discounts, product categories, warehouses, inventory, and delivery times
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                  Designed interactive dashboards in Power BI to monitor sales trends, regional performance, stockouts, and delivery efficiency
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                  Conducted statistical analysis to understand how discounts and pricing affected order volume and revenue
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-primary rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                  Generated insights on peak order times, fast/slow-moving product categories, and regional demand patterns, supporting data-driven decisions
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Power BI</span>
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Data Analysis</span>
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Statistical Analysis</span>
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">E-commerce Analytics</span>
+              </div>
+            </div>
+
+            <!-- Research Assistant -->
+            <div class="experience-card bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-8 border border-gray-700/50" data-aos="fade-up" data-aos-delay="200">
+              <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+                <div class="flex items-start space-x-4">
+                  <div class="w-16 h-16 bg-gradient-to-r from-accent to-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Research Assistant</h3>
+                    <p class="text-primary font-semibold text-lg mb-2">Savitribai Phule Pune University</p>
+                    <p class="text-gray-400">Pune, India</p>
+                  </div>
+                </div>
+                <div class="mt-4 lg:mt-0 text-right">
+                  <span class="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold">Jan 2023 - Dec 2023</span>
+                </div>
+              </div>
+              <ul class="space-y-3 text-gray-300 mb-6">
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                  Conducted research on AI-based fitness applications, focusing on real-time posture recognition and correction using CNN and Mediapipe
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                  Published findings as First Author at IEEE TEECCON 2024, highlighting the role of computer vision in improving health and fitness outcomes
+                </li>
+                <li class="flex items-start">
+                  <span class="w-2 h-2 bg-accent rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                  Assisted in dataset preparation, model training, and technical writing, contributing to the project's successful conference acceptance
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Computer Vision</span>
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">CNN</span>
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Mediapipe</span>
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Research</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary">Featured Projects</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+              Innovative projects showcasing expertise in data science, machine learning, and software development
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- EcoIntel -->
+            <div class="project-card bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-xl border border-gray-700/50" data-aos="fade-up" data-aos-delay="50">
+              <div class="mb-6">
+                <div class="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">EcoIntel</h3>
+              </div>
+              <p class="text-gray-300 mb-6 leading-relaxed">Fake review classification with XGBoost and sentiment analysis with a CNN-LSTM hybrid to surface reliable customer insights for e-commerce.</p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">XGBoost</span>
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">CNN-LSTM</span>
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">NLP</span>
+              </div>
+              <div class="flex gap-3">
+                <a href="https://github.com/atharvtem/EcoIntel" target="_blank" class="flex-1 text-center bg-primary/20 hover:bg-primary/30 text-primary px-4 py-2 rounded-lg transition-colors duration-300 text-sm font-medium">View Repo</a>
+              </div>
+            </div>
+
+            <!-- FitTip -->
+            <div class="project-card bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-xl border border-gray-700/50" data-aos="fade-up" data-aos-delay="100">
+              <div class="mb-6">
+                <div class="w-12 h-12 bg-gradient-to-r from-accent to-primary rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v8m-4-4h8"/></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">FitTip</h3>
+              </div>
+              <p class="text-gray-300 mb-6 leading-relaxed">Real-time posture recognition and correction using Mediapipe and CNN, providing accuracy feedback and guidance during workouts.</p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Mediapipe</span>
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">TensorFlow</span>
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">OpenCV</span>
+              </div>
+              <div class="flex gap-3">
+                <a href="https://github.com/atharvtem/FitTip" target="_blank" class="flex-1 text-center bg-accent/20 hover:bg-accent/30 text-accent px-4 py-2 rounded-lg transition-colors duration-300 text-sm font-medium">View Repo</a>
+              </div>
+            </div>
+
+            <!-- SkillSync -->
+            <div class="project-card bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-xl border border-gray-700/50" data-aos="fade-up" data-aos-delay="150">
+              <div class="mb-6">
+                <div class="w-12 h-12 bg-gradient-to-r from-accent to-primary rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586l5.414 5.414V19a2 2 0 01-2 2z"/></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">SkillSync</h3>
+              </div>
+              <p class="text-gray-300 mb-6 leading-relaxed">Resume parser using NER to extract key info and match candidates to job descriptions with similarity scoring.</p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Python</span>
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">spaCy</span>
+                <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">NLTK</span>
+              </div>
+              <div class="flex gap-3">
+                <a href="https://github.com/atharvtem/SkillSync" target="_blank" class="flex-1 text-center bg-accent/20 hover:bg-accent/30 text-accent px-4 py-2 rounded-lg transition-colors duration-300 text-sm font-medium">View Repo</a>
+              </div>
+            </div>
+
+            <!-- SnakeMaster -->
+            <div class="project-card bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-xl border border-gray-700/50" data-aos="fade-up" data-aos-delay="200">
+              <div class="mb-6">
+                <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h2a4 4 0 014 4v6a4 4 0 008 0v-1"/></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">SnakeMaster</h3>
+              </div>
+              <p class="text-gray-300 mb-6 leading-relaxed">Automated classic Snake game with reinforcement learning to optimize moves and improve scores over time.</p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Python</span>
+                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">RL</span>
+              </div>
+              <div class="flex gap-3">
+                <a href="https://github.com/atharvtem/Snake-Master" target="_blank" class="flex-1 text-center bg-green-500/20 hover:bg-green-500/30 text-green-400 px-4 py-2 rounded-lg transition-colors duration-300 text-sm font-medium">View Repo</a>
+              </div>
+            </div>
+
+            <!-- Talent Trackers -->
+            <div class="project-card bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-xl border border-gray-700/50" data-aos="fade-up" data-aos-delay="250">
+              <div class="mb-6">
+                <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5v8h4zm6 0V7h4v12h-4z"/></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">Talent Trackers</h3>
+              </div>
+              <p class="text-gray-300 mb-6 leading-relaxed">Football analytics platform with player metrics visualization and match outcome predictions.</p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Python</span>
+                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Streamlit</span>
+              </div>
+              <div class="flex gap-3">
+                <a href="https://github.com/atharvtem/Football-Analysis" target="_blank" class="flex-1 text-center bg-green-500/20 hover:bg-green-500/30 text-green-400 px-4 py-2 rounded-lg transition-colors duration-300 text-sm font-medium">View Repo</a>
+              </div>
+            </div>
+
+            <!-- WebBrowser -->
+            <div class="project-card bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-8 hover:scale-105 transition-all duration-300 shadow-xl border border-gray-700/50" data-aos="fade-up" data-aos-delay="300">
+              <div class="mb-6">
+                <div class="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h18M3 12h18M3 19h18"/></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">WebBrowser</h3>
+              </div>
+              <p class="text-gray-300 mb-6 leading-relaxed">A Java and JavaFX desktop web browser with multi-window support and session management.</p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Java</span>
+                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">JavaFX</span>
+              </div>
+              <div class="flex gap-3">
+                <a href="#" class="flex-1 pointer-events-none opacity-60 text-center bg-primary/20 text-primary px-4 py-2 rounded-lg text-sm font-medium">Repo Private</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Publications Section -->
+      <section id="publications" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary">Publications & Research</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+              Published research contributions in IEEE conferences
+            </p>
+          </div>
+
+          <div class="space-y-8">
+            <!-- IEEE ICCC Publication -->
+            <div class="publication-card bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-8 border border-gray-700/50" data-aos="fade-up" data-aos-delay="100">
+              <div class="flex items-start space-x-6">
+                <div class="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
+                    <div>
+                      <h3 class="text-2xl font-bold text-white mb-2">EcoIntel: Fake Review Classification and Sentiment Analysis</h3>
+                      <p class="text-primary font-semibold mb-2">IEEE ICCC Conference</p>
+                      <p class="text-gray-400 text-sm">February 2025</p>
+                    </div>
+                    <span class="bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold mt-2 lg:mt-0">First Author</span>
+                  </div>
+                  <p class="text-gray-300 leading-relaxed mb-4">
+                    Research paper discussing methods to improve customer decision-making by identifying and removing fake reviews, 
+                    thereby providing more reliable sentiment insights using XGBoost and CNN-LSTM models.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Machine Learning</span>
+                    <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">NLP</span>
+                    <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Sentiment Analysis</span>
+                    <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Classification</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- IEEE TEECCON Publication -->
+            <div class="publication-card bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-8 border border-gray-700/50" data-aos="fade-up" data-aos-delay="200">
+              <div class="flex items-start space-x-6">
+                <div class="w-16 h-16 bg-gradient-to-r from-accent to-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
+                    <div>
+                      <h3 class="text-2xl font-bold text-white mb-2">AI-Based Fitness Applications: Real-time Posture Recognition</h3>
+                      <p class="text-accent font-semibold mb-2">IEEE TEECCON Conference</p>
+                      <p class="text-gray-400 text-sm">2024</p>
+                    </div>
+                    <span class="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-semibold mt-2 lg:mt-0">First Author</span>
+                  </div>
+                  <p class="text-gray-300 leading-relaxed mb-4">
+                    Research highlighting the role of computer vision in improving health and fitness outcomes through 
+                    real-time posture recognition and correction using CNN and Mediapipe technologies.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Computer Vision</span>
+                    <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">CNN</span>
+                    <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Mediapipe</span>
+                    <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Health Tech</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blogs Section -->
+      <section id="blogs" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary">Latest Blogs</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">Recent posts from my Medium</p>
+          </div>
+
+          <div id="blog-list" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="100">
+            <!-- Filled dynamically -->
+          </div>
+
+          <div class="text-center mt-10">
+            <a href="https://medium.com/@atharvtembhurnikar" target="_blank" class="inline-block px-6 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-lg font-semibold transition-all duration-300">View more on Medium</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary">Technical Skills</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Programming Languages -->
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="text-2xl font-bold text-white mb-6 text-center">Languages</h3>
+              <div class="space-y-4">
+                <div class="skill-item bg-gradient-to-br from-gray-700/50 to-gray-800/50 p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 border border-gray-600/30">
+                  <img src="logos/python-logo-only.png" alt="Python" class="w-12 h-12 mx-auto mb-3">
+                  <h4 class="text-lg font-semibold text-white">Python</h4>
+                </div>
+                <div class="skill-item bg-gradient-to-br from-gray-700/50 to-gray-800/50 p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 border border-gray-600/30">
+                  <img src="logos/sql.png" alt="SQL" class="w-12 h-12 mx-auto mb-3">
+                  <h4 class="text-lg font-semibold text-white">SQL</h4>
+                </div>
+                <div class="skill-item bg-gradient-to-br from-gray-700/50 to-gray-800/50 p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 border border-gray-600/30">
+                  <img src="logos/java_152760.png" alt="Java" class="w-12 h-12 mx-auto mb-3">
+                  <h4 class="text-lg font-semibold text-white">Java</h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- Libraries & Frameworks -->
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="text-2xl font-bold text-white mb-6 text-center">Libraries</h3>
+              <div class="space-y-4">
+                <div class="skill-item bg-gradient-to-br from-gray-700/50 to-gray-800/50 p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 border border-gray-600/30">
+                  <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <span class="text-primary font-bold text-sm">NP</span>
+                  </div>
+                  <h4 class="text-lg font-semibold text-white">NumPy</h4>
+                </div>
+                <div class="skill-item bg-gradient-to-br from-gray-700/50 to-gray-800/50 p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 border border-gray-600/30">
+                  <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <span class="text-primary font-bold text-sm">PD</span>
+                  </div>
+                  <h4 class="text-lg font-semibold text-white">pandas</h4>
+                </div>
+                <div class="skill-item bg-gradient-to-br from-gray-700/50 to-gray-800/50 p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 border border-gray-600/30">
+                  <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <span class="text-primary font-bold text-sm">SK</span>
+                  </div>
+                  <h4 class="text-lg font-semibold text-white">scikit-learn</h4>
+                </div>
+                <div class="skill-item bg-gradient-to-br from-gray-700/50 to-gray-800/50 p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 border border-gray-600/30">
+                  <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <span class="text-primary font-bold text-sm">TF</span>
+                  </div>
+                  <h4 class="text-lg font-semibold text-white">TensorFlow</h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+              <h3 class="text-2xl font-bold text-white mb-6 text-center">Tools</h3>
+              <div class="space-y-4">
+                <div class="skill-item bg-gradient-to-br from-gray-700/50 to-gray-800/50 p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 border border-gray-600/30">
+                  <img src="logos/git.png" alt="Git" class="w-12 h-12 mx-auto mb-3">
+                  <h4 class="text-lg font-semibold text-white">Git</h4>
+                </div>
+                <div class="skill-item bg-gradient-to-br from-gray-700/50 to-gray-800/50 p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 border border-gray-600/30">
+                  <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <span class="text-accent font-bold text-sm">PBI</span>
+                  </div>
+                  <h4 class="text-lg font-semibold text-white">Power BI</h4>
+                </div>
+                <div class="skill-item bg-gradient-to-br from-gray-700/50 to-gray-800/50 p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 border border-gray-600/30">
+                  <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <span class="text-accent font-bold text-sm">TB</span>
+                  </div>
+                  <h4 class="text-lg font-semibold text-white">Tableau</h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- Specializations -->
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+              <h3 class="text-2xl font-bold text-white mb-6 text-center">Specializations</h3>
+              <div class="space-y-4">
+                <div class="skill-item bg-gradient-to-br from-gray-700/50 to-gray-800/50 p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 border border-gray-600/30">
+                  <img src="logos/machine learning.jpg" alt="Machine Learning" class="w-12 h-12 mx-auto mb-3">
+                  <h4 class="text-lg font-semibold text-white">Machine Learning</h4>
+                </div>
+                <div class="skill-item bg-gradient-to-br from-gray-700/50 to-gray-800/50 p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 border border-gray-600/30">
+                  <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <span class="text-green-400 font-bold text-sm">NLP</span>
+                  </div>
+                  <h4 class="text-lg font-semibold text-white">NLP</h4>
+                </div>
+                <div class="skill-item bg-gradient-to-br from-gray-700/50 to-gray-800/50 p-4 rounded-xl text-center hover:scale-105 transition-all duration-300 border border-gray-600/30">
+                  <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <span class="text-green-400 font-bold text-sm">CV</span>
+                  </div>
+                  <h4 class="text-lg font-semibold text-white">Computer Vision</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Achievements Section -->
+      <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary">Achievements</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="achievement-card bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-8 border border-gray-700/50" data-aos="fade-up" data-aos-delay="100">
+              <div class="flex items-start space-x-4">
+                <div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-white mb-2">Winner - AI Artist INNOVATION24</h3>
+                  <p class="text-yellow-400 font-semibold mb-2">Cummins College of Engineering, Pune</p>
+                  <p class="text-gray-300">Recognized for innovative AI-based artistic solutions and creative problem-solving.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="achievement-card bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-8 border border-gray-700/50" data-aos="fade-up" data-aos-delay="200">
+              <div class="flex items-start space-x-4">
+                <div class="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-white mb-2">Finalist - Viz-a-thon</h3>
+                  <p class="text-primary font-semibold mb-2">AI Student's Association, VIIT, Pune</p>
+                  <p class="text-gray-300">Demonstrated excellence in data visualization and analytical storytelling.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary">Get In Touch</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-8"></div>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+              Let's connect and discuss opportunities, collaborations, or research ideas
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-12">
+            <!-- Contact Form -->
+            <div data-aos="fade-right">
+              <div class="bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-8 border border-gray-700/50">
+                <h3 class="text-2xl font-bold mb-6 text-white">Send a Message</h3>
+                <form action="https://formspree.io/f/mbjndewy" method="POST" class="space-y-6">
+                  <input type="hidden" name="_subject" value="New message from Portfolio contact form" />
+                  <input type="hidden" name="_replyto" value="attem@umd.edu" />
+                  <div>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your Name"
+                      required
+                      class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-300"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Your Email"
+                      required
+                      class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-300"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      name="subject"
+                      placeholder="Subject"
+                      required
+                      class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-300"
+                    />
+                  </div>
+                  <div>
+                    <textarea
+                      name="message"
+                      rows="5"
+                      placeholder="Your Message"
+                      required
+                      class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-300 resize-none"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Contact Info & Social Links -->
+            <div data-aos="fade-left">
+              <div class="space-y-8">
+                <div class="bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-8 border border-gray-700/50">
+                  <h3 class="text-2xl font-bold mb-6 text-white">Contact Information</h3>
+                  <div class="space-y-4 mb-8">
+                    <div class="flex items-center space-x-4">
+                      <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <p class="text-gray-400 text-sm">Email</p>
+                        <p class="text-white">attem@umd.edu</p>
+                      </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                      <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <p class="text-gray-400 text-sm">Phone</p>
+                        <p class="text-white">(240) 886-6670</p>
+                      </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                      <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <p class="text-gray-400 text-sm">Location</p>
+                        <p class="text-white">College Park, MD, USA</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <h4 class="text-lg font-semibold text-white mb-4">Connect With Me</h4>
+                  <div class="grid grid-cols-2 gap-4">
+                    <a href="https://www.linkedin.com/in/atharv-tembhurnikar-b55237226" target="_blank" class="social-link group flex flex-col items-center p-4 bg-gray-700/30 rounded-xl hover:bg-primary/10 transition-all duration-300 border border-gray-600/30 hover:border-primary/50">
+                      <svg class="w-6 h-6 text-primary mb-2 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      <span class="text-white font-medium text-sm">LinkedIn</span>
+                    </a>
+
+                    <a href="https://github.com/atharvtem" target="_blank" class="social-link group flex flex-col items-center p-4 bg-gray-700/30 rounded-xl hover:bg-primary/10 transition-all duration-300 border border-gray-600/30 hover:border-primary/50">
+                      <svg class="w-6 h-6 text-primary mb-2 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                      </svg>
+                      <span class="text-white font-medium text-sm">GitHub</span>
+                    </a>
+
+                    <a href="https://medium.com/@atharvtembhurnikar" target="_blank" class="social-link group flex flex-col items-center p-4 bg-gray-700/30 rounded-xl hover:bg-primary/10 transition-all duration-300 border border-gray-600/30 hover:border-primary/50">
+                      <img src="./logos/medium-alt-svgrepo-com.png" alt="Medium" class="w-6 h-6 mb-2 filter invert group-hover:scale-110 transition-transform duration-300" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);">
+                      <span class="text-white font-medium text-sm">Medium</span>
+                    </a>
+
+                    <a href="#" target="_blank" class="social-link group flex flex-col items-center p-4 bg-gray-700/30 rounded-xl hover:bg-primary/10 transition-all duration-300 border border-gray-600/30 hover:border-primary/50">
+                      <svg class="w-6 h-6 text-primary mb-2 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                      </svg>
+                      <span class="text-white font-medium text-sm">IEEE Profile</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900/95 border-t border-gray-800 py-8 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <p class="text-gray-400">© 2024 Atharv Tembhurnikar. All rights reserved.</p>
+          </div>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Privacy Policy</a>
+            <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+      });
+
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+            // Close mobile menu if open
+            mobileMenu.classList.add('hidden');
+          }
+        });
+      });
+
+      // Navbar background on scroll
+      window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+          nav.classList.add('bg-gray-900/98');
+          nav.classList.remove('bg-gray-900/95');
+        } else {
+          nav.classList.add('bg-gray-900/95');
+          nav.classList.remove('bg-gray-900/98');
+        }
+      });
+
+      // Add active state to navigation links
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= (sectionTop - 200)) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('text-primary');
+          link.classList.add('text-gray-300');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.remove('text-gray-300');
+            link.classList.add('text-primary');
+          }
+        });
+      });
+
+      // Load latest Medium blogs (2-3)
+      (async () => {
+        const container = document.getElementById('blog-list');
+        if (!container) return;
+
+        const feedUrl = 'https://medium.com/feed/@atharvtembhurnikar';
+        const api = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`;
+
+        try {
+          const res = await fetch(api);
+          const data = await res.json();
+          if (!data || !data.items) throw new Error('No items');
+
+          const posts = data.items.filter(item => item.categories && item.categories.length > 0).slice(0, 3);
+
+          if (posts.length === 0) throw new Error('No posts');
+
+          container.innerHTML = posts.map(post => {
+            const title = post.title || 'Untitled';
+            const link = post.link;
+            const pubDate = new Date(post.pubDate).toLocaleDateString();
+            const author = post.author || 'Medium';
+            // Prefer content over description to avoid image captions; remove common caption patterns
+            const raw = (post.content || post.description || '').replace(/<figure[\s\S]*?<\/figure>/g, ' ').replace(/<[^>]+>/g, ' ');
+            const cleaned = raw.replace(/\s+/g, ' ').trim();
+            const desc = (cleaned.length > 0 ? cleaned : 'Read more...').slice(0, 180) + '...';
+
+            return `
+              <a href="${link}" target="_blank" class="block group bg-gradient-to-br from-gray-800/80 to-gray-900/80 rounded-2xl p-6 border border-gray-700/50 hover:scale-[1.02] transition-all duration-300 shadow-xl">
+                <div class="mb-3 text-sm text-gray-400 flex items-center gap-3">
+                  <span class="px-2 py-1 bg-primary/20 text-primary rounded">${author}</span>
+                  <span>${pubDate}</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3 group-hover:text-primary">${title}</h3>
+                <p class="text-gray-300">${desc}</p>
+              </a>
+            `;
+          }).join('');
+        } catch (e) {
+          container.innerHTML = `
+            <div class="col-span-full text-center text-gray-400">
+              Unable to load posts right now. Please check my <a class="text-primary underline" target="_blank" href="https://medium.com/@atharvtembhurnikar">Medium</a>.
+            </div>
+          `;
+        }
+      })();
+    </script>
+  </body>
+</html>

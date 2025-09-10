@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medium Blog Display</title>
+  <!-- Add your own styles if needed -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .blog-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .blog-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .blog-content {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<div class="blog-container" id="blogContainer">
+  <div class='sk-ww-medium-publication-feed' data-embed-id='25377864'></div><script src='https://widgets.sociablekit.com/medium-publication-feed/widget.js' async defer></script>
+</div>
+
+<script>
+  // Replace 'YOUR_CLIENT_ID' and 'YOUR_CLIENT_SECRET' with your Medium integration details
+  const clientId = 'YOUR_CLIENT_ID';
+  const clientSecret = 'YOUR_CLIENT_SECRET';
+
+  fetch(`https://api.medium.com/v1/tokens`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: `grant_type=client_credentials&client_id=${clientId}&client_secret=${clientSecret}`,
+  })
+    .then(response => response.json())
+    .then(data => {
+      const accessToken = data.access_token;
+
+      // Replace 'YOUR_POST_ID' with the actual post ID you want to display
+      const postId = 'YOUR_POST_ID';
+
+      fetch(`https://api.medium.com/v1/posts/${postId}`, {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+      })
+        .then(response => response.json())
+        .then(post => {
+          // Render the post on the website
+          renderPost(post.data);
+        });
+    });
+
+  function renderPost(post) {
+    const blogContainer = document.getElementById('blogContainer');
+
+    const blogTitle = document.createElement('div');
+    blogTitle.classList.add('blog-title');
+    blogTitle.textContent = post.title;
+
+    const blogContent = document.createElement('div');
+    blogContent.classList.add('blog-content');
+    blogContent.innerHTML = post.content;
+
+    blogContainer.appendChild(blogTitle);
+    blogContainer.appendChild(blogContent);
+  }
+</script>
+
+</body>
+</html>

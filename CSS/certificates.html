@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Certificates</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Your Name</h1>
+            <p>Web Developer</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html#hero">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <!-- Add links to other sections as needed -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2>Certificates</h2>
+            <!-- Example certificates -->
+            <div class="certificate" onclick="viewCertificate('certificate1')">
+                <img src="certificate1.jpg" alt="Certificate 1">
+                <p>Certificate 1</p>
+            </div>
+
+            <div class="certificate" onclick="viewCertificate('certificate2')">
+                <img src="certificate2.jpg" alt="Certificate 2">
+                <p>Certificate 2</p>
+            </div>
+
+            <!-- Add more certificates as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function viewCertificate(certificateId) {
+            // Implement certificate viewing logic (e.g., open a modal or navigate to a detailed view)
+            alert(`Viewing ${certificateId}`);
+        }
+    </script>
+</body>
+</html>
